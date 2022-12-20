@@ -10,22 +10,25 @@ import CountriesService from "./API/CountriesService"
 function App() {
 
   const [countries, setCountries] = useState([])
-
     const [selectedRegion, setSelectedRegion] = useState("")
-
     const [searchQuery, setSearchQuery] = useState("")
 
-
-    function getFilteredByRegion(){
+    ///результат вычисления функции кэшируется
+    const filteredByRegion = useMemo(()=>{
       console.log("OTRABOTALA FILTRACIA");
-        if(selectedRegion){
-          return countries.filter((country)=>selectedRegion===country.region)
-        }
+      if(selectedRegion){
+        return countries.filter((country)=>selectedRegion===country.region)
+      }
         return countries
-    }
 
-    const filteredByRegion = getFilteredByRegion()
+    },[selectedRegion, countries])
 
+    ///теперь попробуем выполнять поиск по уже отфильтрованному массиву(если он вообще отфильтрован)
+    const filteredAndSearchCountries = useMemo(()=>{
+      return filteredByRegion.filter((country)=>country.name.toLowerCase().includes(searchQuery.toLowerCase()))
+    }, [searchQuery, filteredByRegion])
+
+    
     useEffect(()=>{
         fetchCountries()
     },[])
@@ -33,6 +36,7 @@ function App() {
     async function fetchCountries(){
         const countries = await CountriesService.getAll();
         setCountries(countries)
+        // console.log(countries[0].name);
     }
 
 
@@ -65,7 +69,7 @@ function App() {
    />
    </div>
 
-      <CardsList countries={filteredByRegion}/>
+      <CardsList countries={filteredAndSearchCountries}/>
    </Layout>
   )
 }
