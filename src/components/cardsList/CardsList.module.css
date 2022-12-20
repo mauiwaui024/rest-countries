@@ -1,0 +1,8 @@
+ul{
+    margin-top: 40px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    row-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
