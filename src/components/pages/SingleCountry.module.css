@@ -1,4 +1,5 @@
 .btn{
+    /* margin-left: 10px; */
     margin-top: 30px;
     width: 100px;
     height: 35px;
@@ -12,6 +13,7 @@
     cursor: pointer;
 }
 .btnDark{
+    /* margin-left: 10px; */
     margin-top: 30px;
     width: 100px;
     height: 35px;
@@ -41,21 +43,24 @@
 .wrapper{
     margin: 0 auto;
     padding: 5px 10px;
-    max-width: 1300px;
-    height: 100vh;
+    /* max-width: 1300px; */
+    /* height: 100vh; */
     background-color: var(--verLightGray)
 }
 
-.wrapperDark{
-    margin: 0 auto;
-    max-width: 1300px;
-    height: 100vh;
-    background-color: var(--veryDarkBlue);
-}
-.container{
+
+.containerC{
     margin-top: 3rem;
     display: flex;
     justify-content: space-between;
+    background-color: var(--lightBackground);
+}
+
+.containerCDark{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--veryDarkBlue);
 }
 .content{
     display: flex;
@@ -77,7 +82,7 @@
 
 .countryFlag{
     width: 35rem;
-    height: 20rem;
+    height: 18rem;
 }
 
 .countryFlag img{
@@ -93,7 +98,10 @@
 }
 
 @media screen and (max-width: 1200px) {
-    .container{
+    .wrapper{
+        padding: 0;
+    }
+    .containerC, .containerCDark{
         flex-direction: column;
         align-items: center;
     }
@@ -102,14 +110,14 @@
     }
     .content{
         width: 100%;
-        padding-left: 2rem;
+        /* padding-left: 2rem; */
     }
 
     .countryFlag{
-       padding: 0 2rem;
+       padding: 0 20px;
     }
-    .btn{
-        margin-left: 2rem;
+    .btnDark, .btn{
+        margin-left: 20px;
     }
    
 }
@@ -119,6 +127,10 @@
 @media screen and (max-width: 600px) {
     .container{
         
+    }
+
+    .btnDark, .btn{
+        margin-left: 20px;
     }
     
     .descContainer{

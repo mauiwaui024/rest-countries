@@ -48,8 +48,12 @@
 
 @media screen and (max-width: 600px) {
    .containerCards, .containerCardsDark{
+    padding: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   }
+   .wrapper1, .wrapper1Dark{
+    padding: 0;
    }
 }

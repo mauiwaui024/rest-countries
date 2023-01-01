@@ -78,7 +78,7 @@ function SingleCountry() {
         }
 
 
-    <div className={styles.container}>
+    <div className={darkTheme? styles.containerCDark: styles.containerC}>
        
         <div className={styles.countryFlag}>
             <img src = {country.flag}/>
