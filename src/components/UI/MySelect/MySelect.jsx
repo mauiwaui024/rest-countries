@@ -1,14 +1,21 @@
 import React from 'react'
+import styles from "./MySelect.module.css"
+import { useTheme } from '../../../hooks/ThemeContext'
+
 
 function MySelect({options, defaultValue, value, onChange}) {
+  
+  const darkTheme = useTheme()
+  
   return (
-    <select
+    <select className={darkTheme? styles.selectDark : ""}
     value={value}
     onChange={event =>onChange(event.target.value)}
     >
-      <option disabled value="">{defaultValue}</option>
+      <option className={darkTheme? styles.selectDark: ""} disabled value="">{defaultValue}</option>
       {options.map(option=>
-      <option key={option.value} value = {option.value}>
+      <option className={darkTheme? styles.selectDark: ""}
+       key={option.value} value = {option.value}>
         {option.name}
       </option>
       )}

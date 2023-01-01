@@ -1,0 +1,30 @@
+.wrapper{
+    margin-top: 50px;
+   
+}
+
+.searchContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .searchContainer{
+        padding: 0 2rem;
+    }
+   
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .searchContainer{
+        padding: 0 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+}

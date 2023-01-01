@@ -1,0 +1,131 @@
+.btn{
+    margin-top: 30px;
+    width: 100px;
+    height: 35px;
+    background: transparent;  
+    box-shadow: -2px 0px 13px -3px rgba(0,0,0,0.75); 
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btnDark{
+    margin-top: 30px;
+    width: 100px;
+    height: 35px;
+    background: transparent;  
+    box-shadow: -2px 0px 13px -3px rgba(0,0,0,0.75); 
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+    color: var(--white);
+}
+
+.btn:hover{
+    background-color:rgba(0,0,0,0.75) ;
+    color: #fff;
+}
+.btnDark:hover{
+    background-color: #fff ;
+    color: var(--veryDarkBlue);
+}
+.dark{
+    color: var(--white)
+}
+
+.wrapper{
+    margin: 0 auto;
+    padding: 5px 10px;
+    max-width: 1300px;
+    height: 100vh;
+    background-color: var(--verLightGray)
+}
+
+.wrapperDark{
+    margin: 0 auto;
+    max-width: 1300px;
+    height: 100vh;
+    background-color: var(--veryDarkBlue);
+}
+.container{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.content{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.description{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.descContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.countryFlag{
+    width: 35rem;
+    height: 20rem;
+}
+
+.countryFlag img{
+    width: 100%;
+}
+
+.linka{
+   
+}
+.linkDark{
+    cursor: pointer;
+    color: var(--white)
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .descContainer{
+        flex-direction: column;
+    }
+    .content{
+        width: 100%;
+        padding-left: 2rem;
+    }
+
+    .countryFlag{
+       padding: 0 2rem;
+    }
+    .btn{
+        margin-left: 2rem;
+    }
+   
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .container{
+        
+    }
+    
+    .descContainer{
+        flex-direction: column;
+    }
+
+    .countryFlag{
+        width: 100%;
+    }
+}

@@ -1,4 +1,15 @@
-.container{
-    max-width: 1440px;
+.containerLayout{
+    max-width: 1440;
+    height: 100vh;
     margin: 0 auto;
+    background-color: var(--lightBackground);
+    text-align: center;
+}
+
+.containerLayoutDark{
+    max-width: 1440;
+    margin: 0 auto;
+    background-color: var(--veryDarkBlue);
+    height: 100vh;
+    text-align: center;
 }

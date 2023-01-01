@@ -10,9 +10,9 @@ export default class CountriesService{
      }
     }
 
-    static async getByRegion(region){
+    static async getByCode(code){
       try {
-         const response = await axios.get("https://restcountries.com/v2/region/" + region)
+         const response = await axios.get("https://restcountries.com/v2/alpha/" + code)
          return response.data
       } catch (error) {
          console.log(error);

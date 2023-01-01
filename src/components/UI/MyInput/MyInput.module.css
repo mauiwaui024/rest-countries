@@ -1,0 +1,52 @@
+.myInput{
+  height: 45px;
+  width: 35rem;  
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  outline: none;
+  box-shadow: 0px 1.5px 3px  gray;
+  border-radius: 10px;
+}
+
+.myInputDark{
+  height: 45px;
+  width: 35rem;  
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+  outline: none;
+  box-shadow: 0px 1.5px 3px  gray;
+  border-radius: 10px;
+  background-color: var(--darkBlue);
+  color: #fff;
+}
+
+.myInput::-webkit-input-placeholder{
+    opacity: 0.5;
+    color: gray;
+    font-size: 15px;
+}
+
+.myInputDark::-webkit-input-placeholder{
+    
+    color: #fff;
+    font-size: 15px;
+}
+
+/* @media screen and (max-width: 1200px) {
+ input{
+ 
+ }
+ 
+} */
+
+@media screen and (max-width: 600px) {
+  .myInput, .myInputDark{
+    width: 100%;
+  }
+  input::placeholder{
+    font-size: 12px;
+}
+  
+ }
